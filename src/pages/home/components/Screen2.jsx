@@ -7,7 +7,7 @@ function Screen2() {
                     <div className="h-3 w-3 bg-[#0075ff] rounded-full" />
                     <h2>About Us</h2>
                 </div>
-                <div className="h-1/2 w-2/3">                
+                <div className="h-1/2 w-full lg:w-2/3">                
                     <p className='text-3xl'>We are a Web3 Technology company that is merging
                         realities between Digital Art, Play to Earn Gaming, and
                         Social Interaction. We’re building a network of 3D Virtual
@@ -16,13 +16,13 @@ function Screen2() {
                     </p>
                     
                 </div>
-                <div className="h-1/2 w-1/2 self-end">
+                <div className="h-1/2 w-full lg:w-1/2 self-end">
                     <p className='text-2xl'>We aren’t your typical NFT Project and we are proud
                         of that. We’ll be delivering unrivaled experiences with
                         functionality beyond comprehension. We’re setting a
                         new standard for “Utility Focused” NFT Projects.</p>
                 </div>
-                <div className="self-end w-2/3 flex gap-3 text-xl">
+                <div className="self-end w-full lg:w-2/3 flex gap-3 text-xl">
                     <div className="w-1/2 border-b border-white">More About Us</div>
                     <div className="w-1/2 border-b border-white">The Roadmap</div>
                 </div>
