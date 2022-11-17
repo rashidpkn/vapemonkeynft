@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-function Screen5() {
+function FAQS() {
     return (
-        <div className='text-white flex flex-col items-center gap-10'>
+        <div className='text-white flex flex-col items-center gap-10 bg-[#121212] py-[5%]'>
             <div className="">
                 <h2 className='text-center text-3xl md:text-5xl'>In Case You </h2>
                 <h2 className='text-center text-3xl md:text-5xl'>Missed Anything</h2>
@@ -25,7 +25,7 @@ function Screen5() {
     )
 }
 
-export default Screen5
+export default FAQS
 
 function FAQ({ question, ans }) {
     const [show, setShow] = useState(false)

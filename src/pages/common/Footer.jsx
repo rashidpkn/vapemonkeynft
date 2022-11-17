@@ -1,6 +1,8 @@
 import React from 'react'
-
+import {useLocation} from 'react-router-dom'
 function Footer() {
+    const location = useLocation()
+    console.log(location.pathname)
     return (
         <div className='text-white bg-[#121212]'>
             <div className="flex flex-col lg:flex-row   border-y border-[#333] divide-x divide-[#333]">
