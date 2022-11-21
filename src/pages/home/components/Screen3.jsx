@@ -62,9 +62,9 @@ function Marquee() {
   ]
   return (
     <div className="w-full h-48 overflow-hidden">
-      <div class="track-horizontal flex">
+      <div className="track-horizontal flex">
         {
-          src.map(e=><img class="w-[180px] h-[180px]" src={e} alt="nft" />)
+          src.map(e=><img key={e} className="w-[180px] h-[180px]" src={e} alt="nft" />)
         }
         
       </div>

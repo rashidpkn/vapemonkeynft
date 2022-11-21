@@ -15,10 +15,11 @@ function Screen4() {
             </div>
             <div className="">
                 <iframe
+                title='nfts'
                     src="https://player.vimeo.com/video/705808623?autoplay=1&amp;loop=1&amp;title=0&amp;byline=0&amp;portrait=0&amp;background=1"
                     className='w-96 h-96'
-                    frameborder="0" webkitallowfullscreen=""
-                    mozallowfullscreen="" allowfullscreen="" data-ready="true">
+                    frameBorder="0" webkitallowfullscreen=""
+                    mozallowfullscreen="" allowFullScreen="" data-ready="true">
                 </iframe>
             </div>
         </div>

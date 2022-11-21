@@ -1,8 +1,7 @@
 import React from 'react'
-import {useLocation} from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+import { Discode, InstagramLogo, TiwtterLogo } from './NavBar'
 function Footer() {
-    const location = useLocation()
-    console.log(location.pathname)
     return (
         <div className='text-white bg-[#121212]'>
             <div className="flex flex-col lg:flex-row   border-y border-[#333] divide-x divide-[#333]">
@@ -27,15 +26,20 @@ function Footer() {
                             <span>Terms & Privacy Policy</span>
                             <span>Licensing</span>
                         </div>
-                        <div className="flex gap-5">
-                            <div className="h-10 w-10 bg-white"></div>
-                            <div className="h-10 w-10 bg-white"></div>
-                            <div className="h-10 w-10 bg-white"></div>
+                        <div className="flex gap-5 invert">
+                            <div className="h-10 w-10 ">
+                                <InstagramLogo />
+                            </div>
+                            <div className="h-10 w-10 ">
+                                <TiwtterLogo />
+                            </div>
+                            <div className="h-10 w-10 ">
+                                <Discode />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
             <CopyRight />
         </div>
     )
@@ -45,8 +49,19 @@ export default Footer
 
 
 function Navigation() {
+    const {pathname} = useLocation()
     return (
-        <div className="w-full h-[300px] p-10"></div>
+        <div className="w-full h-[300px] flex flex-col p-[5%] text-sm ">
+            <h2 className='tracking-[.2rem]'>NAVIGATION</h2>
+            <ul className="flex flex-col flex-wrap w-1/2 h-3/4 text-4xl font-light gap-x-5">
+                <li className={` ${pathname === '/' && 'line-through'} h-1/3 flex items-center`}><Link to={'/'}> Home </Link></li>
+                <li className={` ${pathname === '/about' && 'line-through'} h-1/3 flex items-center`}><Link to={'/about'}> About </Link></li>
+                <li className={` ${pathname === '/roadmaps' && 'line-through'} h-1/3 flex items-center`}><Link > Roadmaps </Link></li>
+                <li className={` ${pathname === '/meta' && 'line-through'} h-1/3 flex items-center`}><Link to={'/meta'}> Metaverse </Link></li>
+                <li className={` ${pathname === '/contact' && 'line-through'} h-1/3 flex items-center`}><Link to={'/contact'}> Contact </Link></li>
+                <li className='h-1/3 flex items-center text-lg'><Link to={'/press'}> Press/Media Kit </Link></li>
+            </ul>
+        </div>
     )
 }
 
