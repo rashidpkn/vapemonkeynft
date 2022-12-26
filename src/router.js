@@ -4,6 +4,7 @@ import Contact from './pages/contact'
 import Home from './pages/home'
 import Metaverse from './pages/metaverse'
 import Press from './pages/press'
+import Test from './pages/test'
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
     {
         path:'press',
         element:<Press />
+    },
+    {
+        path:'/test/*',
+        element:<Test />
     }
 ])
 

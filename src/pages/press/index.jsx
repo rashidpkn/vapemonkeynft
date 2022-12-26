@@ -1,13 +1,15 @@
 import React from 'react'
 import Fixed from '../common/Fixed'
 import NavBar from '../common/NavBar'
+import ScrollToTop from '../common/ScrollToTop'
 
 function Press() {
     return (
         <div className='bg-[#121212]'>
+            <ScrollToTop />
             <NavBar />
             <div className="px-[10%] py-[5%] h-screen flex flex-col justify-center items-center text-center text-white gap-5">
-                <div className="w-[300px] h-[300px] lg:w-[488px] lg:h-[488px] bg-white rounded-full overflow-hidden flex justify-center items-center">
+                <div className="w-[300px] h-[300px] lg:w-[488px] lg:h-[488px] bg-white rounded-full overflow-hidden flex justify-center items-center flex-shrink-0">
                     <img src="/image/press/1.jpeg" className='w-[calc(100%-10px)] h-[calc(100%-10px)] rounded-full ' alt="" />
                 </div>
                 <h1 className='text-4xl font-bold'>EGOZE PR/ Media Kit</h1>

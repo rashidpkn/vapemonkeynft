@@ -1,9 +1,11 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { Link, useLocation } from 'react-router-dom'
+import { setRoadMap } from '../../redux/slice/util'
 import { Discode, InstagramLogo, TiwtterLogo } from './NavBar'
 function Footer() {
     return (
-        <div className='text-white bg-[#121212]'>
+        <footer className='text-white bg-[#121212]'>
             <div className="flex flex-col lg:flex-row   border-y border-[#333] divide-x divide-[#333]">
                 <div className="px-3 md:px-0 w-full lg:w-1/2 h-[420px] flex flex-col justify-center items-center gap-3">
                     <div className="flex flex-col gap-3">
@@ -13,7 +15,10 @@ function Footer() {
                     </div>
                     <div className="flex gap-3 justify-center flex-wrap">
                         <div className="max-w-[432px] flex flex-col gap-3">
-                            <input className='w-full h-[38px] bg-transparent outline-none border-b' type="text" />
+                            <form action="">
+                                <label htmlFor="email" >Email</label>
+                                <input className='w-full h-[38px] bg-transparent outline-none border-b' id='email' type="text" />
+                            </form>
                             <p>By submitting your email, you are agreeing to our Terms of Service  & Privacy Policy.</p>
                         </div>
                         <button className='w-[100px] h-[100px] rounded-full bg-[#ff0097] hover:h-[90px] hover:w-[90px] duration-200'>SEND IT</button>
@@ -27,21 +32,21 @@ function Footer() {
                             <span>Licensing</span>
                         </div>
                         <div className="flex gap-5 invert">
-                            <div className="h-10 w-10 ">
+                            <a title='Social Media Links' aria-label='social Media links' target={'_blank'} href='https://google.com' className="h-10 w-10 ">
                                 <InstagramLogo />
-                            </div>
-                            <div className="h-10 w-10 ">
+                            </a>
+                            <a title='Social Media Links' aria-label='social Media links' target={'_blank'} href='https://twitter.com/monkey_dubai' className="h-10 w-10 ">
                                 <TiwtterLogo />
-                            </div>
-                            <div className="h-10 w-10 ">
+                            </a>
+                            <a title='Social Media Links' aria-label='social Media links' target={'_blank'} href='https://discord.gg/NC3RXXh8' className="h-10 w-10 ">
                                 <Discode />
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
             <CopyRight />
-        </div>
+        </footer>
     )
 }
 
@@ -49,17 +54,18 @@ export default Footer
 
 
 function Navigation() {
+    const dispatch = useDispatch()
     const {pathname} = useLocation()
     return (
         <div className="w-full h-[300px] flex flex-col p-[5%] text-sm ">
             <h2 className='tracking-[.2rem]'>NAVIGATION</h2>
             <ul className="flex flex-col flex-wrap w-1/2 h-3/4 text-4xl font-light gap-x-5">
-                <li className={` ${pathname === '/' && 'line-through'} h-1/3 flex items-center`}><Link to={'/'}> Home </Link></li>
-                <li className={` ${pathname === '/about' && 'line-through'} h-1/3 flex items-center`}><Link to={'/about'}> About </Link></li>
-                <li className={` ${pathname === '/roadmaps' && 'line-through'} h-1/3 flex items-center`}><Link > Roadmaps </Link></li>
-                <li className={` ${pathname === '/meta' && 'line-through'} h-1/3 flex items-center`}><Link to={'/meta'}> Metaverse </Link></li>
-                <li className={` ${pathname === '/contact' && 'line-through'} h-1/3 flex items-center`}><Link to={'/contact'}> Contact </Link></li>
-                <li className='h-1/3 flex items-center text-lg'><Link to={'/press'}> Press/Media Kit </Link></li>
+                <li className={`decoration-[#ff0097] ${pathname === '/' && 'line-through'} h-1/3 flex items-center`}><Link title='home' to={'/'}> Home </Link></li>
+                <li className={`decoration-[#ff0097] ${pathname === '/about' && 'line-through'} h-1/3 flex items-center`}><Link title='about' to={'/about'}> About </Link></li>
+                <li className={`decoration-[#ff0097] ${pathname === '/roadmaps' && 'line-through'} h-1/3 flex items-center cursor-pointer`} onClick={()=>{dispatch(setRoadMap(true))}}> Roadmaps </li>
+                {/* <li className={`decoration-[#ff0097] ${pathname === '/meta' && 'line-through'} h-1/3 flex items-center`}><Link title='metaverse' to={'/meta'}> Metaverse </Link></li> */}
+                <li className={`decoration-[#ff0097] ${pathname === '/contact' && 'line-through'} h-1/3 flex items-center`}><Link title='contact' to={'/contact'}> Contact </Link></li>
+                {/* <li className='h-1/3 flex items-center text-lg'><Link title='press and media kit' to={'/press'}> Press/Media Kit </Link></li> */}
             </ul>
         </div>
     )

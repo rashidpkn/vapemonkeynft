@@ -1,31 +1,84 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { setRoadMap } from '../../redux/slice/util'
+
 
 function NavBar() {
     const [social, setSocial] = useState(false)
     const [menu, setMenu] = useState(false)
-    return (<>
-        <Link to={'/'}>
-            <img src="/image/home/logo.svg" className='hidden lg:block absolute top-10 left-10 z-50' alt="" />
+    const { pathname } = useLocation()
+    const dispatch = useDispatch()
+
+    const [scrollY, setScrollY] = useState(0)
+
+    useEffect(() => {
+  
+        const handleScroll = event => {
+           if(window.scrollY===0){
+            setScrollY(0)
+           }else{
+            setScrollY(1)
+           }
+           
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []);
+
+
+
+
+    return (
+    <>
+        <Link title='home' to={'/'}>
+            {
+                scrollY ===0 ? <img src="/image/home/logo.svg" title='vapemonkeynft logo' className='absolute top-9 inset-x-0 mx-auto z-50 w-40 lg:w-80' alt="vapemonkeynft logo" /> 
+                : <img src="/image/home/logo.svg" title='vapemonkeynft logo' className='fixed top-9 left-5 lg:left-10 z-50 w-40 lg:w-64' alt="vapemonkeynft logo" />
+            }
+            
+            
         </Link>
-        <div className='fixed right-10 top-10 flex gap-3 z-50'>
+        <header className='fixed right-10 top-10 flex gap-3 z-50'>
             <div className={`${menu ? 'hidden' : 'flex gap-3'}`}>
 
-                <div className={`duration-200  bg-white rounded-full flex justify-center items-center ${social ? 'w-10 h-10' : 'w-0 h-0'}`}>
+                <a title='Social Media Links' aria-label='social Media links' target={'_blank'} href='https://google.com' className={`duration-200  bg-white rounded-full flex justify-center items-center ${social ? 'w-10 h-10' : 'w-0 h-0'}`}>
                     <InstagramLogo />
-                </div>
-                <div className={`duration-200  bg-white rounded-full flex justify-center items-center ${social ? 'w-10 h-10' : 'w-0 h-0'}`}>
+                </a>
+                <a title='Social Media Links' aria-label='social Media links' target={'_blank'} href=' https://twitter.com/monkey_dubai' className={`duration-200  bg-white rounded-full flex justify-center items-center ${social ? 'w-10 h-10' : 'w-0 h-0'}`}>
                     <TiwtterLogo />
-                </div>
-                <div className={`duration-200  bg-white rounded-full flex justify-center items-center ${social ? 'w-10 h-10' : 'w-0 h-0'}`}>
+                </a>
+                <a title='Social Media Links' aria-label='social Media links' target={'_blank'} href='https://discord.gg/NC3RXXh8' className={`duration-200  bg-white rounded-full flex justify-center items-center ${social ? 'w-10 h-10' : 'w-0 h-0'}`}>
                     <Discode />
-                </div>
+                </a>
 
-                <div className="w-10 h-10 bg-white rounded-full flex justify-center items-center p-2" onClick={() => setSocial(!social)}>
+                <div className="w-10 h-10 bg-white rounded-full flex justify-center items-center p-2 hover:rotate-180 duration-500" onClick={() => setSocial(!social)}>
                     <PlusButton />
                 </div>
             </div>
-            <div className="hidden lg:flex w-[78px] h-[42px] rounded-3xl bg-white" onClick={() => setMenu(!menu)}></div>
+            <div className="flex w-[78px] h-[42px] rounded-3xl bg-white flex-col justify-center items-center gap-2" onClick={() => { setMenu(!menu) }}>
+                <div className="h-[1px] w-[60%] bg-black"></div>
+                <div className="h-[1px] w-[60%] bg-black"></div>
+            </div>
+        </header>
+        <div className={`${menu ? 'navbar z-50' : 'hidenavbar'} h-72 fixed right-10 top-10 border duration-500 bg-white rounded-3xl`}>
+            <button className={` ${menu ? 'lg:flex' : 'hidden'}   w-[78px] h-[42px] rounded-3xl bg-black float-right flex-col justify-center items-center gap-2`} onClick={() => { setMenu(!menu) }}>
+                <div className="h-[1px] w-[60%] bg-white"></div>
+                <div className="h-[1px] w-[60%] bg-white"></div>
+            </button>
+
+            <nav className={`${menu ? 'flex' : 'hidden'} flex-col flex-wrap text-4xl font-normal gap-1 text-black p-3 decoration-[#ff0097]`}>
+                <li className={`decoration-[#ff0097] ${pathname === '/' && 'line-through'} h-1/3 flex items-center`}><Link title='home' to={'/'}> Home </Link></li>
+                <li className={`decoration-[#ff0097] ${pathname === '/about' && 'line-through'} h-1/3 flex items-center`}><Link title='about' to={'/about'}> About </Link></li>
+                <li className={`decoration-[#ff0097] ${pathname === '/roadmaps' && 'line-through'} h-1/3 flex items-center cursor-pointer`} onClick={()=>{dispatch(setRoadMap(true));setMenu(false)}}> Roadmaps </li>
+                {/* <li className={`decoration-[#ff0097] ${pathname === '/meta' && 'line-through'} h-1/3 flex items-center`}><Link title='metaverse' to={'/meta'}> Metaverse </Link></li> */}
+                <li className={`decoration-[#ff0097] ${pathname === '/contact' && 'line-through'} h-1/3 flex items-center`}><Link title='contact' to={'/contact'}> Contact </Link></li>
+                {/* <li className='h-1/3 flex items-center text-lg'><Link title='press and media kit' to={'/press'}> Press/Media Kit </Link></li> */}
+            </nav>
         </div>
     </>
     )

@@ -1,6 +1,33 @@
 import React, { useState } from 'react'
 
 function FAQS() {
+
+    const faq = [
+        {
+            question:'When is the public mint date?',
+            ans:'7th januavry. Stay up to date with this information by joining our Discord.',
+        },
+        {
+            question:'When is the whitelist mint date?',
+            ans:'31st dec. Stay up to date with this information by joining our Discord.',
+        },
+        {
+            question:'What blockchain do you use?',
+            ans:'All Vape Monkey NFTs on the Ethereum blockchain. (ERC721A Smart Contracts)',
+        },
+        {
+            question:'What is the mint price?',
+            ans:' 0.05',
+        },
+        {
+            question:'How many whitelist spots will be available?',
+            ans:'We will have a total of 50 whitelist spots available.',
+        },
+        // {
+        //     question:'How can I earn a whitelist spot?',
+        //     ans:'We are running numerous whitelist competitions on our Twitter and Discord. Follow our Twitter and join our Discord to find out when the next whitelist competition is.',
+        // },
+    ]
     return (
         <div className='text-white flex flex-col items-center gap-10 bg-[#121212] py-[5%]'>
             <div className="">
@@ -8,18 +35,7 @@ function FAQS() {
                 <h2 className='text-center text-3xl md:text-5xl'>Missed Anything</h2>
             </div>
             <div className="divide-y w-[80%] xl:w-3/4 divide-[#333] space-y-5">
-                <FAQ ans={'This is yet to be announced. Stay up to date with this information by joining our Discord.'}
-                    question={'When is the public mint date?'} />
-                <FAQ ans={'This is yet to be announced. Stay up to date with this information by joining our Discord.'}
-                    question={'When is the whitelist mint date?'} />
-                <FAQ ans={'All Vapemonkeydubai live on the Ethereum blockchain. (ERC721A Smart Contracts)'}
-                    question={'What blockchain do you use?'} />
-                <FAQ ans={'This is yet to be announced. Stay up to date with this information by joining our Discord.'}
-                    question={'What is the mint price?'} />
-                <FAQ ans={'We will have a total of 1,000 whitelist spots available.'}
-                    question={'How many whitelist spots will be available?'} />
-                <FAQ ans={'We are running numerous whitelist competitions on our Twitter and Discord. Follow our Twitter and join our Discord to find out when the next whitelist competition is.'}
-                    question={'How can I earn a whitelist spot?'} />
+                {faq.map(e=><FAQ key={e.question} question={e.question} ans={e.ans} />)}
             </div>
         </div>
     )

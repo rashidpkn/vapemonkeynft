@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 import Fixed from '../common/Fixed'
 import Footer from '../common/Footer'
 import NavBar from '../common/NavBar'
+import ScrollToTop from '../common/ScrollToTop'
 
 function Contact() {
     const [title, setTitle] = useState('')
     return (
         <div>
+            <ScrollToTop />
             <NavBar />
             <div className="min-h-screen w-full flex flex-wrap gradient">
                 <div className="w-full min-h-1/2 lg:w-1/2 lg:min-h-full  flex justify-center items-center p-5">
