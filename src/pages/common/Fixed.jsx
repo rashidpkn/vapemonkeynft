@@ -48,8 +48,8 @@ const roadmap = [
   {
     image: '/image/roadmap/5.jpg',
     date: 'MID Q4, 2022',
-    title: 'Vape Monkey NFT Social App',
-    desc: 'Vape Monkey NFT Social is launched on both IOS & Android devices.'
+    title: 'Vape Monkey NFT Social',
+    desc: 'We are social, follow us on twitter, discord,instagram and join our community.'
   },
   {
     image: '/image/roadmap/6.jpeg',
@@ -60,27 +60,27 @@ const roadmap = [
   {
     image: '/image/roadmap/7.jpg',
     date: 'LATE Q4, 2022',
-    title: 'Play To Earn',
-    desc: 'Three of our Play to Earn game titles are launched.'
+    title: 'Spend To Earn',
+    desc: 'By owing Vapemonkey use case nft to can radeem on vapemonkey websites.'
   },
-  {
-    image: '/image/roadmap/8.jpeg',
-    date: 'EARLY Q2, 2023',
-    title: 'Meta-Land Sale',
-    desc: 'Our Metaverse land sales begin. Vape Monkey NFT holders gain early access to this.'
-  },
-  {
-    image: '/image/roadmap/9.jpg',
-    date: 'MID Q2, 2023',
-    title: 'Metaverse Launch',
-    desc: '6 of the 8 Districts within our Metaverse are accessible .'
-  },
-  {
-    image: '/image/roadmap/10.png',
-    date: 'Q3, 2023',
-    title: 'Metaverse Final',
-    desc: 'All 8 Districts in our Metaverse are fully accessible.'
-  },
+  // {
+  //   image: '/image/roadmap/8.jpeg',
+  //   date: 'EARLY Q2, 2023',
+  //   title: 'Meta-Land Sale',
+  //   desc: 'Our Metaverse land sales begin. Vape Monkey NFT holders gain early access to this.'
+  // },
+  // {
+  //   image: '/image/roadmap/9.jpg',
+  //   date: 'MID Q2, 2023',
+  //   title: 'Metaverse Launch',
+  //   desc: '6 of the 8 Districts within our Metaverse are accessible .'
+  // },
+  // {
+  //   image: '/image/roadmap/10.png',
+  //   date: 'Q3, 2023',
+  //   title: 'Metaverse Final',
+  //   desc: 'All 8 Districts in our Metaverse are fully accessible.'
+  // },
 ]
 
 
