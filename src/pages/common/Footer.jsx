@@ -28,7 +28,9 @@ function Footer() {
                     <Navigation />
                     <div className="w-full h-[120px] flex items-center justify-center lg:justify-start gap-10 px-0 lg:px-10 ">
                         <div className="flex flex-col">
-                            <span>Terms & Privacy Policy</span>
+                            <Link to={'/terms-and-privacy'}>
+                                <span>Terms & Privacy Policy</span>
+                            </Link>
                             <span>Licensing</span>
                         </div>
                         <div className="flex gap-5 invert">
