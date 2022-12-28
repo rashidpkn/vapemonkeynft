@@ -51,7 +51,7 @@ function FAQ({ question, ans }) {
                 <p className='text-lg md:text-2xl'>{question}</p>
                 <button className='text-3xl text-[#333]' >+</button>
             </div>
-            <div className={`${show ? 'block text-[#333] text-md md:text-xl' : 'hidden'}`}>{ans}</div>
+            <div className={`${show ? 'block text-white/75 text-md md:text-xl' : 'hidden'}`}>{ans}</div>
         </div>
     )
 }
