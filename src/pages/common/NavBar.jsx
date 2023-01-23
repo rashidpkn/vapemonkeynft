@@ -46,13 +46,13 @@ function NavBar() {
         <header className='fixed right-10 top-10 flex gap-3 z-50'>
             <div className={`${menu ? 'hidden' : 'flex gap-3'}`}>
 
-                <a title='Social Media Links' aria-label='social Media links' target={'_blank'} href='https://google.com' className={`duration-200  bg-white rounded-full flex justify-center items-center ${social ? 'w-10 h-10' : 'w-0 h-0'}`}>
+                <a title='Social Media Links' aria-label='social Media links' target={'_blank'} rel="noreferrer" href='https://google.com' className={`duration-200  bg-white rounded-full flex justify-center items-center ${social ? 'w-10 h-10' : 'w-0 h-0'}`}>
                     <InstagramLogo />
                 </a>
-                <a title='Social Media Links' aria-label='social Media links' target={'_blank'} href=' https://twitter.com/monkey_dubai' className={`duration-200  bg-white rounded-full flex justify-center items-center ${social ? 'w-10 h-10' : 'w-0 h-0'}`}>
+                <a title='Social Media Links' aria-label='social Media links' target={'_blank'} rel="noreferrer" href=' https://twitter.com/monkey_dubai' className={`duration-200  bg-white rounded-full flex justify-center items-center ${social ? 'w-10 h-10' : 'w-0 h-0'}`}>
                     <TiwtterLogo />
                 </a>
-                <a title='Social Media Links' aria-label='social Media links' target={'_blank'} href='https://discord.gg/NC3RXXh8' className={`duration-200  bg-white rounded-full flex justify-center items-center ${social ? 'w-10 h-10' : 'w-0 h-0'}`}>
+                <a title='Social Media Links' aria-label='social Media links' target={'_blank'} rel="noreferrer" href='https://discord.gg/NC3RXXh8' className={`duration-200  bg-white rounded-full flex justify-center items-center ${social ? 'w-10 h-10' : 'w-0 h-0'}`}>
                     <Discode />
                 </a>
 

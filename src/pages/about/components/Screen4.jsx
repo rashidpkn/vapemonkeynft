@@ -1,21 +1,21 @@
 import React, { useState } from 'react'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import Slider from 'react-slick'
+
 import { useEffect } from 'react';
 
 
 function Screen4() {
-    const settings = {
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        // speed: 2000,
-        autoplaySpeed: 500,
-        cssEase: "linear"
-    };
+    // const settings = {
+    //     infinite: true,
+    //     speed: 500,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     autoplay: true,
+    //     // speed: 2000,
+    //     autoplaySpeed: 500,
+    //     cssEase: "linear"
+    // };
 
     const src = [
         "/image/home/nft/1.jpg",
@@ -40,7 +40,7 @@ function Screen4() {
         }, 500)
 
         return () => clearInterval(intervalId);
-
+// eslint-disable-next-line
     }, [times])
 
 
