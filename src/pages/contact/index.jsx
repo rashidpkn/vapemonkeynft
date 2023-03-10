@@ -19,7 +19,6 @@ function Contact() {
                 </div>
                 <div className="w-full min-h-1/2 lg:w-1/2 lg:min-h-full bg-black flex flex-col justify-center items-center gap-14 p-5 py-20">
                     <input placeholder='Your Name'  className='outline-none border-b bg-transparent w-full text-[#828282] text-2xl px-1 max-w-[643px]' type="text" />
-                    <input placeholder='Your Title' className='outline-none border-b bg-transparent w-full text-[#828282] text-2xl px-1 max-w-[643px]' type="text" />
                     <input placeholder='Your Email' className='outline-none border-b bg-transparent w-full text-[#828282] text-2xl px-1 max-w-[643px]' type="text" />
                     <input placeholder='Your Phone' className='outline-none border-b bg-transparent w-full text-[#828282] text-2xl px-1 max-w-[643px]' type="text" />
                     <div className="w-full max-w-[643px] flex flex-col gap-14">

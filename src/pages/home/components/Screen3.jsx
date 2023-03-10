@@ -11,28 +11,30 @@ function Screen3() {
             <div className="h-3 w-3 bg-[#0075ff] rounded-full" />
             {/* <h2>BENEFITS</h2> */}
             <div className="wrap">
-                    <p className="text">BENEFITS</p>
-                    <p className="text">BENEFITS</p>
-                    <p className="text">BENEFITS</p>
+                    <p className="text">KEY BENEFITS</p>
+                    <p className="text">KEY BENEFITS</p>
+                    <p className="text">KEY BENEFITS</p>
                     <p className="crack"></p>
             </div>
           </div>
-          <h2 className='text-3xl md:text-5xl'>We're different by design.</h2>
+          {/* <h2 className='text-3xl md:text-5xl'>We're different by design.</h2> */}
         </div>
         <div className="w-full min-h-[550px] border p-5 space-y-10">
           <div className="w-full  space-y-5">
-            <h2 className='text-xl md:text-3xl'>One Vapemonkeydubai,</h2>
+            <h2 className='text-xl md:text-3xl'>One Vape Monkey NFT</h2>
             <h2 className='text-2xl md:text-4xl linearcolor'>Limitless Possibilities.</h2>
           </div>
           <div className="w-full text-xl md:text-3xl space-y-5 divide-y divide-[#333]">
-            <h2>Vapemonkeydubai Social App</h2>
-            <h2 className=''>Play to Earn Gaming</h2>
-            <h2>Sandbox Voxels</h2>
-            <h2>Exclusive Airdrops</h2>
-            <h2>Revenue Distributions</h2>
+            <h2>Exclusive promotion for NFT holders.</h2>
+            <h2>Discount on Vape Monkey website globally between 5 to 20 %.</h2>
+            <h2>10000 NFT available.</h2>
+            <h2>Mint price 0.05 ETH.</h2>
+            <a href="https://mint.vapemonkeynft.io/">
+              <h2 className='blink'>Mint NFT Now.</h2>
+            </a>
           </div>
           <div className="w-full">
-            <p className=''>
+            <p >
             {/* text-[#636363] */}
               All Vapemonkeydubai live on the Ethereum Blockchain. We leverage logic in our ERC-721A smart contract(s) to reward and verify the Vapemonkeydubai
               community / holders.
@@ -45,10 +47,10 @@ function Screen3() {
         <div className="w-full h-24 invisible"></div>
         <img src="/image/home/image1.jpg" className='w-full h-[550px] object-cover' alt="vapemonkeynft banner" title='vapemonkeynft' />
         <div className="w-full  flex flex-wrap justify-center items-center gap-7">
-          <Features icon={'/image/home/icon/icon1.svg'} title={'250+ Unique Traits'} />
-          <Features icon={'/image/home/icon/icon2.svg'} title={'Fully 3D Avatars'} />
-          <Features icon={'/image/home/icon/icon3.svg'} title={'Fully Decentralized'} />
-          <Features icon={'/image/home/icon/icon4.svg'} title={'Fully Doxxed Team'} />
+          <Features icon={'/image/home/nft/4.jpg'} title={'1000 NFT available.'} />
+          <Features icon={'/image/home/icon/icon2.svg'} title={'Fully hand drawn art work.'} />
+          <Features icon={'/image/home/icon/icon3.svg'} title={'Fully Decentralized.'} />
+          <Features icon={'/image/home/icon/icon4.svg'} title={'Discount on Vape Monkey website globally.'} />
         </div>
       </div>
     </section>

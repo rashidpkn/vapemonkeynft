@@ -72,12 +72,10 @@ function NavBar() {
             </button>
 
             <nav className={`${menu ? 'flex' : 'hidden'} flex-col flex-wrap text-4xl font-normal gap-1 text-black p-3 decoration-[#ff0097]`}>
-                <li className={`decoration-[#ff0097] ${pathname === '/' && 'line-through'} h-1/3 flex items-center`}><Link title='home' to={'/'}> Home </Link></li>
-                <li className={`decoration-[#ff0097] ${pathname === '/about' && 'line-through'} h-1/3 flex items-center`}><Link title='about' to={'/about'}> About </Link></li>
-                <li className={`decoration-[#ff0097] ${pathname === '/roadmaps' && 'line-through'} h-1/3 flex items-center cursor-pointer`} onClick={()=>{dispatch(setRoadMap(true));setMenu(false)}}> Roadmaps </li>
-                {/* <li className={`decoration-[#ff0097] ${pathname === '/meta' && 'line-through'} h-1/3 flex items-center`}><Link title='metaverse' to={'/meta'}> Metaverse </Link></li> */}
-                <li className={`decoration-[#ff0097] ${pathname === '/contact' && 'line-through'} h-1/3 flex items-center`}><Link title='contact' to={'/contact'}> Contact </Link></li>
-                {/* <li className='h-1/3 flex items-center text-lg'><Link title='press and media kit' to={'/press'}> Press/Media Kit </Link></li> */}
+                <li onClick={()=>{dispatch(setRoadMap(false));setMenu(false)}} className={`decoration-[#ff0097] ${pathname === '/' && 'line-through'} h-1/3 flex items-center`}><Link title='home' to={'/'}> Home </Link></li>
+                <li onClick={()=>{dispatch(setRoadMap(false));setMenu(false)}} className={`decoration-[#ff0097] ${pathname === '/about' && 'line-through'} h-1/3 flex items-center`}><Link title='about' to={'/about'}> About </Link></li>
+                <li onClick={()=>{dispatch(setRoadMap(true));setMenu(false)}} className={`decoration-[#ff0097] ${pathname === '/roadmaps' && 'line-through'} h-1/3 flex items-center cursor-pointer`} > Roadmaps </li>
+                <li onClick={()=>{dispatch(setRoadMap(false));setMenu(false)}} className={`decoration-[#ff0097] ${pathname === '/contact' && 'line-through'} h-1/3 flex items-center`}><Link title='contact' to={'/contact'}> Contact </Link></li>
             </nav>
         </div>
     </>

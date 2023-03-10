@@ -4,12 +4,12 @@ function FAQS() {
 
     const faq = [
         {
-            question:'When is the public mint date?',
-            ans:'7th januavry. Stay up to date with this information by joining our Discord.',
+            question:'When is the whitelist mint date?',
+            ans:'3rd April. Stay up to date with this information by joining our Discord.',
         },
         {
-            question:'When is the whitelist mint date?',
-            ans:'31st dec. Stay up to date with this information by joining our Discord.',
+            question:'When is the public mint date?',
+            ans:'10th April. Stay up to date with this information by joining our Discord.',
         },
         {
             question:'What blockchain do you use?',
@@ -17,16 +17,13 @@ function FAQS() {
         },
         {
             question:'What is the mint price?',
-            ans:' 0.05',
+            ans:'0.05 ETH.',
         },
         {
             question:'How many whitelist spots will be available?',
             ans:'We will have a total of 50 whitelist spots available.',
         },
-        // {
-        //     question:'How can I earn a whitelist spot?',
-        //     ans:'We are running numerous whitelist competitions on our Twitter and Discord. Follow our Twitter and join our Discord to find out when the next whitelist competition is.',
-        // },
+        
     ]
     return (
         <div className='text-white flex flex-col items-center gap-10 bg-[#121212] py-[5%]'>

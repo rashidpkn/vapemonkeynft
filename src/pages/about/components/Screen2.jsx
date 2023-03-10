@@ -8,22 +8,11 @@ function Screen2() {
                     the ground up
                 </h2>
             </div>
-            <div className="w-full lg:w-1/2 h-full space-y-3 text-lg">
-                <p>Welcome to Vape Monkey NFTs – the newest addition to our collection of digital art! 
-                    We're a company that is passionate about all things vape and digital art, 
-                    and we've combined our two passions to bring you these unique, one-of-a-kind items.</p>
+            <div className="w-full lg:w-1/2 h-full space-y-3 text-lg text-justify">
+                <p>Introducing Vape Monkey NFTs – the newest addition to our collection of digital art! These unique, one-of-a-kind items are perfect for collectors and vape enthusiasts alike. Each NFT features a different Vape Monkey design, making them a must-have for any fan. Own a piece of digital art history and collect them all today!</p>    
+                <p>Vape Monkey NFTs are more than just collectibles - they have practical uses too! Display your NFT on social media, use as a unique avatar, or trade with other collectors.Own a piece of digital history and show off your style with these must-have items. Start building your collection today!</p>
 
-                <p>Our Vape Monkey NFTs are perfect for collectors and vape enthusiasts alike. 
-                    Each NFT features a different Vape Monkey design, 
-                    making them a must-have for any fan. We believe that art should be accessible to everyone, 
-                    which is why we've made it easy for you to own a piece of digital art history.</p>
-
-                <p>In addition to being collectible items, our NFTs also have practical uses. 
-                    You can display them on your social media profiles, use them as unique avatars, 
-                    or even trade them with other collectors. We're constantly updating our selection, 
-                    so be sure to check back often for new designs.</p>
-
-                <p>Thank you for choosing Vape Monkey NFTs. We hope you enjoy adding these unique items to your collection!</p>
+            
             </div>
         </div>
     )

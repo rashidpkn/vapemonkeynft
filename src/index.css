@@ -3,6 +3,29 @@
 @tailwind utilities;
 
 
+@font-face {
+    font-family: 'neo-latina';
+    src: url('./asset/font/neo-latina.ttf');
+}
+
+.text-neo-latina{
+    font-family: neo-latina;
+}
+
+.blink {
+    animation: blink 200ms step-start infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 50%;
+    }
+  }
+
+
+
+
+
 .linearcolor-marquee {
     /* background: -webkit-linear-gradient(150deg, #0091ff, #ff0097); */
     background: linear-gradient(180deg, #fff, hsla(0, 0%, 100%, 0) 85%);
