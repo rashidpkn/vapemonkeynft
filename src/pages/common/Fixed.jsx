@@ -15,7 +15,7 @@ function Fixed() {
       <div className="fixed bottom-10 right-10  gap-3">
         <a href="https://mint.vapemonkeynft.io">
           <button aria-label="Road map" title='MINT NOW' className="px-2 md:px-4  py-2 md:py-3 bg-[#212121] hover:invert duration-700 rounded-full flex items-center justify-center gap-5" >
-            <img src="/image/common/road-map.svg" className='w-9 h-9' alt="road map" title='road map' />
+            <img src="/image/home/nft/5.jpg" className='w-9 h-9 rounded-full' alt="road map" title='road map' />
             <span className='text-xs text-white hidden w-32 md:flex justify-center items-center font-medium'>MINT NOW</span>
           </button>
         </a>
