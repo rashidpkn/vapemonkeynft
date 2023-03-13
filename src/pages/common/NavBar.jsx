@@ -35,12 +35,17 @@ function NavBar() {
 
     return (
     <>
-        <Link title='home' to={'/'}>
+        <Link className='hidden md:inline-block' title='home' to={'/'}>
             {
                 scrollY ===0 ? <img src="/image/home/logo.svg" title='vapemonkeynft logo' className='absolute top-9 inset-x-0 mx-auto z-50 w-40 lg:w-80' alt="vapemonkeynft logo" /> 
                 : <img src="/image/home/logo.svg" title='vapemonkeynft logo' className='fixed top-9 left-5 lg:left-10 z-50 w-40 lg:w-64' alt="vapemonkeynft logo" />
             }
             
+            
+        </Link>
+        <Link className='inline-block md:hidden' title='home' to={'/'}>
+    
+            <img src="/image/home/logo.svg" title='vapemonkeynft logo' className='fixed top-9 left-5 lg:left-10 z-50 w-40 lg:w-64' alt="vapemonkeynft logo" />
             
         </Link>
         <header className='fixed right-10 top-10 flex gap-3 z-50'>

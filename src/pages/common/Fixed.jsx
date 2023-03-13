@@ -6,17 +6,17 @@ function Fixed() {
   const dispatch = useDispatch()
   return (
     <>
-      <div className="fixed bottom-10 left-10  gap-3">
+      <div className="fixed bottom-5 md:bottom-10 left-5 md:left-10  gap-3">
         <button aria-label="Road map" title='Road map' className="px-2 md:px-4  py-2 md:py-3 bg-[#212121] hover:invert duration-700 rounded-full flex items-center justify-center gap-5" onClick={() => { dispatch(setRoadMap(true)) }}>
           <img src="/image/common/road-map.svg" className='w-9 h-9' alt="road map" title='road map' />
-          <span className='text-xs text-white hidden w-32 md:flex justify-center items-center font-medium'>THE ROADMAP</span>
+          <span className='text-xs text-white  w-20 md:w-32 flex justify-center items-center font-medium'>THE ROADMAP</span>
         </button>
       </div>
-      <div className="fixed bottom-10 right-10  gap-3">
+      <div className="fixed bottom-5 md:bottom-10 right-5 md:right-10  gap-3">
         <a href="https://mint.vapemonkeynft.io">
           <button aria-label="Road map" title='MINT NOW' className="px-2 md:px-4  py-2 md:py-3 bg-[#212121] hover:invert duration-700 rounded-full flex items-center justify-center gap-5" >
             <img src="/image/home/nft/5.jpg" className='w-9 h-9 rounded-full' alt="road map" title='road map' />
-            <span className='text-xs text-white hidden w-32 md:flex justify-center items-center font-medium'>MINT NOW</span>
+            <span className='text-xs text-white  w-20 md:w-32 flex justify-center items-center font-medium'>MINT NOW</span>
           </button>
         </a>
       </div>
@@ -51,7 +51,13 @@ const roadmap = [
     image: '/image/roadmap/5.jpg',
     date: 'Q4, 2023',
     title: 'Vape Monkey NFT Social',
-    desc: 'We are social, follow us on Twitter, Discord, Instagram and join our community.'
+    desc: <>We are social, follow us on 
+    <a href="https://twitter.com/monkey_dubai"> Twitter</a>
+    , 
+    <a href='https://discord.gg/NC3RXXh8'> Discord</a>
+    , 
+    <a href="https://google.com"> Instagram </a>
+    and join our community.</>
   },
   {
     image: '/image/roadmap/7.jpg',

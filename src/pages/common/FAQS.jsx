@@ -4,26 +4,26 @@ function FAQS() {
 
     const faq = [
         {
-            question:'When is the whitelist mint date?',
-            ans:'3rd April. Stay up to date with this information by joining our Discord.',
+            question: 'When is the whitelist mint date?',
+            ans: <>3rd April 2023. Stay up to date with this information by joining our   <a href='https://discord.gg/NC3RXXh8'>Discord</a>. </>,
         },
         {
-            question:'When is the public mint date?',
-            ans:'10th April. Stay up to date with this information by joining our Discord.',
+            question: 'When is the public mint date?',
+            ans: <>10th April 2023. Stay up to date with this information by joining our <a href='https://discord.gg/NC3RXXh8'>Discord</a>.</>,
         },
         {
-            question:'What blockchain do you use?',
-            ans:'All Vape Monkey NFTs on the Ethereum blockchain. (ERC721A Smart Contracts)',
+            question: 'What blockchain do you use?',
+            ans: 'All Vape Monkey NFTs on the Ethereum blockchain. (ERC721A Smart Contracts)',
         },
         {
-            question:'What is the mint price?',
-            ans:'0.05 ETH.',
+            question: 'What is the mint price?',
+            ans: '0.05 ETH.',
         },
         {
-            question:'How many whitelist spots will be available?',
-            ans:'We will have a total of 50 whitelist spots available.',
+            question: 'How many whitelist spots will be available?',
+            ans: 'We will have a total of 50 whitelist spots available.',
         },
-        
+
     ]
     return (
         <div className='text-white flex flex-col items-center gap-10 bg-[#121212] py-[5%]'>
@@ -32,7 +32,12 @@ function FAQS() {
                 <h2 className='text-center text-3xl md:text-5xl'>Missed Anything</h2>
             </div>
             <div className="divide-y w-[80%] xl:w-3/4 divide-[#333] space-y-5">
-                {faq.map(e=><FAQ key={e.question} question={e.question} ans={e.ans} />)}
+                
+                
+
+                
+
+                {faq.map(e => <FAQ key={e.question} question={e.question} ans={e.ans} />)}
             </div>
         </div>
     )

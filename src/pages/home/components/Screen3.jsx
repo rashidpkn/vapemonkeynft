@@ -4,7 +4,7 @@ function Screen3() {
 
 
   return (
-    <section className='text-white flex flex-wrap justify-center items-center gap-5'>
+    <section className='text-white flex flex-wrap justify-center items-center gap-5 px-[5%] md:px-0'>
       <div className="flex flex-col gap-5 max-w-[650px]">
         <div className="w-full h-24 flex flex-col justify-center">
           <div className="flex items-center gap-2">
