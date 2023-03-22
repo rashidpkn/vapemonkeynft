@@ -27,7 +27,7 @@ function Screen3() {
           <div className="w-full text-xl md:text-3xl space-y-5 divide-y divide-[#333]">
             <h2>Exclusive promotion for NFT holders.</h2>
             <h2>Discount on Vape Monkey website globally between 5 to 20 %.</h2>
-            <h2>10000 NFT available.</h2>
+            <h2>10000 NFT's available.</h2>
             <h2>Mint price 0.05 ETH.</h2>
             <a href="https://mint.vapemonkeynft.io/">
               <h2 className='blink'>Mint NFT Now.</h2>
