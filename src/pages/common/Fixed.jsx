@@ -33,18 +33,18 @@ const roadmap = [
     image: '/image/roadmap/1.jpg',
     date: 'Q1,3rd April, 2023',
     title: 'Whitelist',
-    desc: '50 of the 10,000 Vape Monkey NFT are made available for sale whitelis on 3rd April.'
+    desc: "50 of the 10,000 Vape Monkey NFT's are made available for sale whitelis on 3rd April 2023."
   },
   {
     image: '/image/roadmap/2.jpg',
     date: 'Q2, 10th April, 2023',
     title: 'Public Launch',
-    desc: 'The remaining 9950  Vape Monkey NFT are made available for sale to the public on 10th April.'
+    desc: "The remaining 9950  Vape Monkey NFT's are made available for sale to the public on 10th April 2023."
   },
   {
     image: '/image/roadmap/3.jpg',
     date: 'Q3, 2023',
-    title: 'New Location',
+    title: 'New Locations',
     desc: 'Launch in Thailand and Sri Lanka.'
   },
   {
@@ -63,7 +63,7 @@ const roadmap = [
     image: '/image/roadmap/7.jpg',
     date: 'Q4, 2023',
     title: 'Spend To Save',
-    desc: 'By owing Vapemonkey use case NTF to radeem on vapemonkey websites globally.'
+    desc: 'By owning Vapemonkey use case NTF to redeem on vapemonkey websites globally.'
   },
   
 ]
