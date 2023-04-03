@@ -31,15 +31,15 @@ export default Fixed
 const roadmap = [
   {
     image: '/image/roadmap/1.jpg',
-    date: 'Q1,3rd April, 2023',
+    date: 'Q1,1st May, 2023',
     title: 'Whitelist',
-    desc: "50 of the 10,000 Vape Monkey NFT's are made available for sale whitelis on 3rd April 2023."
+    desc: "50 of the 10,000 Vape Monkey NFT's are made available for sale whitelis on 1st May 2023."
   },
   {
     image: '/image/roadmap/2.jpg',
-    date: 'Q2, 10th April, 2023',
+    date: 'Q2, 8th May, 2023',
     title: 'Public Launch',
-    desc: "The remaining 9950  Vape Monkey NFT's are made available for sale to the public on 10th April 2023."
+    desc: "The remaining 9950  Vape Monkey NFT's are made available for sale to the public on 8th May 2023."
   },
   {
     image: '/image/roadmap/3.jpg',

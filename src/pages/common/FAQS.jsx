@@ -5,11 +5,11 @@ function FAQS() {
     const faq = [
         {
             question: 'When is the whitelist mint date?',
-            ans: <>3rd April 2023. Stay up to date with this information by joining our   <a href='https://discord.gg/NC3RXXh8'>Discord</a>. </>,
+            ans: <>1st May 2023. Stay up to date with this information by joining our   <a href='https://discord.gg/NC3RXXh8'>Discord</a>. </>,
         },
         {
             question: 'When is the public mint date?',
-            ans: <>10th April 2023. Stay up to date with this information by joining our <a href='https://discord.gg/NC3RXXh8'>Discord</a>.</>,
+            ans: <>8th May 2023. Stay up to date with this information by joining our <a href='https://discord.gg/NC3RXXh8'>Discord</a>.</>,
         },
         {
             question: 'What blockchain do you use?',
