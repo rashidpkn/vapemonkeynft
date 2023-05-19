@@ -29,17 +29,17 @@ function Fixed() {
 export default Fixed
 
 const roadmap = [
-  {
-    image: '/image/roadmap/1.jpg',
-    date: 'Q1,1st May, 2023',
-    title: 'Whitelist',
-    desc: "50 of the 10,000 Vape Monkey NFT's are made available for sale whitelis on 1st May 2023."
-  },
+  // {
+  //   image: '/image/roadmap/1.jpg',
+  //   date: 'Q1,1st May, 2023',
+  //   title: 'Whitelist',
+  //   desc: "50 of the 10,000 Vape Monkey NFT's are made available for sale whitelis on 1st May 2023."
+  // },
   {
     image: '/image/roadmap/2.jpg',
-    date: 'Q2, 8th May, 2023',
+    date: 'Q2, 1st June, 2023',
     title: 'Public Launch',
-    desc: "The remaining 9950  Vape Monkey NFT's are made available for sale to the public on 8th May 2023."
+    desc: "The remaining 9950  Vape Monkey NFT's are made available for sale to the public on 1st June 2023."
   },
   {
     image: '/image/roadmap/3.jpg',
