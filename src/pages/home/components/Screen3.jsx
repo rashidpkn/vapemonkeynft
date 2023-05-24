@@ -47,7 +47,7 @@ function Screen3() {
         <div className="w-full h-24 invisible"></div>
         <img src="/image/home/image1.jpg" className='w-full h-[550px] object-cover' alt="vapemonkeynft banner" title='vapemonkeynft' />
         <div className="w-full  flex flex-wrap justify-center items-center gap-7">
-          <Features icon={'/image/home/nft/4.jpg'} title={"1000 NFT's available."} />
+          <Features icon={'/image/home/nft/4.jpg'} title={"10,000 NFT's available."} />
           <Features icon={'/image/home/icon/icon2.svg'} title={'Fully hand drawn art work.'} />
           <Features icon={'/image/home/icon/icon3.svg'} title={'Fully Decentralized.'} />
           <Features icon={'/image/home/icon/icon4.svg'} title={'Discount on Vape Monkey websites globally.'} />
