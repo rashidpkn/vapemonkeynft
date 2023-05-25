@@ -10,7 +10,7 @@ function FAQS() {
         },
         {
             question: 'What blockchain do you use?',
-            ans: 'All Vape Monkey NFTs on the Ethereum blockchain. (ERC721A Smart Contracts)',
+            ans: "All Vape Monkey NFT's are on the Ethereum blockchain. (ERC721A Smart Contracts)",
         },
         {
             question: 'What is the mint price?',
