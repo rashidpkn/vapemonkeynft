@@ -26,7 +26,7 @@ function Screen3() {
           </div>
           <div className="w-full text-xl md:text-3xl space-y-5 divide-y divide-[#333]">
             <h2>Exclusive promotion for NFT holders.</h2>
-            <h2>Discount on Vape Monkey website globally between 5 to 20 %.</h2>
+            <h2>Discount on Vape Monkey websites globally 5-20%.</h2>
             <h2>10000 NFT's available.</h2>
             <h2>Mint price 0.05 ETH.</h2>
             <a href="https://mint.vapemonkeynft.io/">
@@ -34,11 +34,7 @@ function Screen3() {
             </a>
           </div>
           <div className="w-full">
-            <p >
-            {/* text-[#636363] */}
-              All Vapemonkeydubai live on the Ethereum Blockchain. We leverage logic in our ERC-721A smart contract(s) to reward and verify the Vapemonkeydubai
-              community / holders.
-            </p>
+            
           </div>
         </div>
         <Marquee />

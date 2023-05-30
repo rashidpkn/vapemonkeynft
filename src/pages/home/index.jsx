@@ -6,6 +6,7 @@ import Screen2 from './components/Screen2'
 import Screen3 from './components/Screen3'
 import FAQS from '../common/FAQS'
 import ScrollToTop from '../common/ScrollToTop'
+import Screen4 from './components/Screen4'
 
 function Home() {
     return (
@@ -15,6 +16,7 @@ function Home() {
             <Screen2 />
             <Screen3 />
             <FAQS />
+            <Screen4 />
             <Fixed />
             <Footer />
         </div>
