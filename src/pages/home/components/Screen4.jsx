@@ -54,20 +54,20 @@ function Screen4() {
                         <div className=" relative flex flex-col gap-3 justify-center items-center hover:scale-110 duration-200 cursor-pointer" onClick={() => { setSelected(2) }} >
                             <div className="absolute w-full h-full bg-[#E57FED]/60" style={{ filter: 'blur(46px)' }}></div>
                             <img className='relative' src={ETHIcon} alt="" />
-                            <p className='text-[14px] text-center'>Download MetaMask <br />
-                                from the wallet’s website.</p>
+                            <p className='text-[14px] text-center'>Funding Your <br />
+                            MetaMask Wallet with ETH.</p>
                         </div>
                         <div className=" relative flex flex-col gap-3 justify-center items-center hover:scale-110 duration-200 cursor-pointer" onClick={() => { setSelected(3) }} >
                             <div className="absolute w-full h-full bg-[#6000B6]/60" style={{ filter: 'blur(46px)' }}></div>
                             <img className='relative' src={nftIcon} alt="" />
-                            <p className='text-[14px] text-center'>Download MetaMask <br />
-                                from the wallet’s website.</p>
+                            <p className='text-[14px] text-center'>Buying the <br />
+                            VapeMonkey NFT.</p>
                         </div>
                         <div className=" relative flex flex-col gap-3 justify-center items-center hover:scale-110 duration-200 cursor-pointer" onClick={() => { setSelected(4) }} >
                             <div className="absolute w-full h-full bg-[#5AACA7]/60" style={{ filter: 'blur(46px)' }}></div>
                             <img className='relative' src={redeem} alt="" />
-                            <p className='text-[14px] text-center'>Download MetaMask <br />
-                                from the wallet’s website.</p>
+                            <p className='text-[14px] text-center'>Buying the <br />
+                            VapeMonkey NFT.</p>
                         </div>
                     </div>
                     {/* <div className="flex justify-between items-center w-full text-center">
@@ -94,7 +94,7 @@ function Screen4() {
                 {selected === 4 && <Selected4 setSelected={setSelected} />}
                 <div className="flex justify-between absolute w-[1200px] bottom-10 ">
                     <button className='bg-white text-black px-8 py-2 rounded hover:scale-110 duration-200' onClick={() => { setSelected(selected - 1) }}>BACK</button>
-                    <button className='bg-white text-black px-8 py-2 rounded hover:scale-110 duration-200' onClick={() => { selected ===4 ? setSelected(0)  :setSelected(selected +1) }}>NEXT</button>
+                    <button className='bg-white text-black px-8 py-2 rounded hover:scale-110 duration-200' onClick={() => { selected === 4 ? setSelected(0) : setSelected(selected + 1) }}>NEXT</button>
                 </div>
             </div>}
         </div>
@@ -159,7 +159,7 @@ const Selected2 = ({ setSelected }) => {
 
             <p className='text-xl'>2.Choose your country and preferred payment method and proceed to make payment</p>
 
-            
+
 
         </div>
     )
@@ -179,7 +179,9 @@ const Selected3 = ({ setSelected }) => {
             <p className='text-xl'>1. Navigate to the VapeMonkey NFT Marketplace</p>
 
             <div className="flex gap-5 items-center">
-                <button className='bg-white text-black w-[256px] h-[56px] rounded hover:scale-110 duration-200'>NFT Marketplace</button>
+                <a href="https://vapemonkeynft.io" target="_blank" rel="noopener noreferrer">
+                    <button className='bg-white text-black w-[256px] h-[56px] rounded hover:scale-110 duration-200'>NFT Marketplace</button>
+                </a>
                 <span>or</span>
                 <p>www.vapemonkeynft.io</p>
             </div>
@@ -190,7 +192,7 @@ const Selected3 = ({ setSelected }) => {
 
             <p className='text-xl'>4. Follow the instructions on the website to mint (purchase) your VapeMonkey NFT.</p>
 
-          
+
 
         </div>
     )
@@ -212,7 +214,7 @@ const Selected4 = ({ setSelected }) => {
                 <li>Shop for the products you want and add them to your cart.</li>
                 <li>Proceed to checkout. Enter your unique discount code in the appropriate box during checkout. Thediscount should be applied to your total purchase.</li>
             </ol>
-           
+
         </div>
     )
 }
