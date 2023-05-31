@@ -10,27 +10,28 @@ import ethBuy from './step/ETH-buy.png'
 
 import { useState } from 'react'
 import { useEffect } from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 function Screen4() {
     const [selected, setSelected] = useState(0)
 
     useEffect(() => {
-
-        console.log(selected);
-    }, [selected])
+        Aos.init()
+    }, [])
 
 
     return (
         <div className='space-y-10'>
             <h2 className='text-center text-3xl md:text-5xl text-white'>How It Works ?</h2>
-            <div className='w-full  flex flex-col justify-center items-center gap-10 text-white  overflow-x-auto'>
+            <div className='w-full  hidden lg:flex flex-col justify-center items-center gap-10 text-white'>
                 <div className="w-[1000px] space-y-7 py-10 ">
 
                     <div className="flex justify-between items-center w-full">
-                        <p className='hover:rotate-[360deg] duration-500 cursor-pointer'>Step 1</p>
-                        <p className='hover:rotate-[360deg] duration-500 cursor-pointer'>Step 2</p>
-                        <p className='hover:rotate-[360deg] duration-500 cursor-pointer'>Step 3</p>
-                        <p className='hover:rotate-[360deg] duration-500 cursor-pointer'>Step 4</p>
+                        <p className='hover:scale-125 duration-200 cursor-pointer' onClick={() => { setSelected(1) }}>Step 1</p>
+                        <p className='hover:scale-125 duration-200 cursor-pointer' onClick={() => { setSelected(2) }}>Step 2</p>
+                        <p className='hover:scale-125 duration-200 cursor-pointer' onClick={() => { setSelected(3) }}>Step 3</p>
+                        <p className='hover:scale-125 duration-200 cursor-pointer' onClick={() => { setSelected(4) }}>Step 4</p>
                     </div>
 
                     <div className="flex justify-between items-center w-full px-4 relative">
@@ -55,34 +56,74 @@ function Screen4() {
                             <div className="absolute w-full h-full bg-[#E57FED]/60" style={{ filter: 'blur(46px)' }}></div>
                             <img className='relative' src={ETHIcon} alt="" />
                             <p className='text-[14px] text-center'>Funding Your <br />
-                            MetaMask Wallet with ETH.</p>
+                                MetaMask Wallet with ETH.</p>
                         </div>
+
                         <div className=" relative flex flex-col gap-3 justify-center items-center hover:scale-110 duration-200 cursor-pointer" onClick={() => { setSelected(3) }} >
                             <div className="absolute w-full h-full bg-[#6000B6]/60" style={{ filter: 'blur(46px)' }}></div>
                             <img className='relative' src={nftIcon} alt="" />
                             <p className='text-[14px] text-center'>Buying the <br />
-                            VapeMonkey NFT.</p>
+                                VapeMonkey NFT.</p>
                         </div>
+
                         <div className=" relative flex flex-col gap-3 justify-center items-center hover:scale-110 duration-200 cursor-pointer" onClick={() => { setSelected(4) }} >
                             <div className="absolute w-full h-full bg-[#5AACA7]/60" style={{ filter: 'blur(46px)' }}></div>
                             <img className='relative' src={redeem} alt="" />
                             <p className='text-[14px] text-center'>Buying the <br />
-                            VapeMonkey NFT.</p>
+                                VapeMonkey NFT.</p>
                         </div>
                     </div>
-                    {/* <div className="flex justify-between items-center w-full text-center">
-                        <p className='text-[14px]'>Download MetaMask <br />
-                            from the wallet’s website.</p>
-                        <p className='text-[14px]'>Funding Your <br />
-                            MetaMask Wallet with ETH</p>
-                        <p className='text-[14px]'>Buying the <br />
-                            VapeMonkey NFT</p>
-                        <p className='text-[14px]'>Redeeming <br /> the Discount</p>
-                    </div> */}
+
                 </div>
 
                 <div className="flex justify-center items-center">
                     <button className='bg-white text-black w-[256px] h-[56px] rounded hover:scale-110 duration-200' onClick={() => { setSelected(1) }}>View Full Process</button>
+                </div>
+
+            </div>
+
+            <div className="lg:hidden text-white space-y-10 w-full overflow-hidden">
+
+                <div className="flex flex-col items-center gap-3 " data-aos="fade-down-right">
+                    <p>Step 1</p>
+                    <div className=" relative flex flex-col gap-3 justify-center items-center hover:scale-110 duration-200 cursor-pointer" onClick={() => { setSelected(1) }} >
+                        <div className="absolute w-full h-full bg-[#F5841F]/60" style={{ filter: 'blur(46px)' }}></div>
+                        <img className='relative' src={metaMaskIcon} alt="" />
+                        <p>METAMASK</p>
+                        <p className='text-[14px] text-center'>Download MetaMask <br />
+                            from the wallet’s website.</p>
+                    </div>
+                </div>
+
+                <div className="flex flex-col items-center gap-3 " data-aos="fade-down-left">
+                    <p>Step 2</p>
+                    <div className=" relative flex flex-col gap-3 justify-center items-center hover:scale-110 duration-200 cursor-pointer" onClick={() => { setSelected(2) }} >
+                        <div className="absolute w-full h-full bg-[#E57FED]/60" style={{ filter: 'blur(46px)' }}></div>
+                        <img className='relative' src={ETHIcon} alt="" />
+                        <p className='text-[14px] text-center'>Funding Your <br />
+                            MetaMask Wallet with ETH.</p>
+                    </div>
+                </div>
+
+
+                <div className="flex flex-col items-center gap-3 " data-aos="fade-up-right">
+                    <p>Step 3</p>
+                    <div className=" relative flex flex-col gap-3 justify-center items-center hover:scale-110 duration-200 cursor-pointer" onClick={() => { setSelected(3) }} >
+                        <div className="absolute w-full h-full bg-[#6000B6]/60" style={{ filter: 'blur(46px)' }}></div>
+                        <img className='relative' src={nftIcon} alt="" />
+                        <p className='text-[14px] text-center'>Buying the <br />
+                            VapeMonkey NFT.</p>
+                    </div>
+                </div>
+
+                <div className="flex flex-col items-center gap-3 " data-aos="fade-up-left">
+                    <p>Step 4</p>
+                    <div className=" relative flex flex-col gap-3 justify-center items-center hover:scale-110 duration-200 cursor-pointer" onClick={() => { setSelected(4) }} >
+                        <div className="absolute w-full h-full bg-[#5AACA7]/60" style={{ filter: 'blur(46px)' }}></div>
+                        <img className='relative' src={redeem} alt="" />
+                        <p className='text-[14px] text-center'>Buying the <br />
+                            VapeMonkey NFT.</p>
+                    </div>
                 </div>
 
             </div>
@@ -92,7 +133,7 @@ function Screen4() {
                 {selected === 2 && <Selected2 setSelected={setSelected} />}
                 {selected === 3 && <Selected3 setSelected={setSelected} />}
                 {selected === 4 && <Selected4 setSelected={setSelected} />}
-                <div className="flex justify-between absolute w-[1200px] bottom-10 ">
+                <div className="flex justify-between absolute w-full lg:w-[1200px] bottom-10 px-5">
                     <button className='bg-white text-black px-8 py-2 rounded hover:scale-110 duration-200' onClick={() => { setSelected(selected - 1) }}>BACK</button>
                     <button className='bg-white text-black px-8 py-2 rounded hover:scale-110 duration-200' onClick={() => { selected === 4 ? setSelected(0) : setSelected(selected + 1) }}>NEXT</button>
                 </div>
@@ -107,7 +148,7 @@ export default Screen4
 
 const Selected1 = ({ setSelected }) => {
     return (
-        <div className="selected-1 px-[5%] md:px-[10%] text-white space-y-5 w-[1300px]">
+        <div className="selected-1 px-[5%] md:px-[10%] text-white space-y-5 lg:w-[1300px]">
             <div className="flex  items-center gap-5">
                 <div className="w-[100px] h-[100px] relative flex flex-col gap-3 justify-center items-center hover:scale-110 duration-200" >
                     <div className="absolute w-full h-full bg-[#F5841F]/60" style={{ filter: 'blur(46px)' }}></div>
@@ -130,20 +171,21 @@ const Selected1 = ({ setSelected }) => {
 
             <p className='text-xl'>2.Complete the on screen process for creating you MetaMask account.</p>
 
-            <div className="w-full p-5 bg-black/10 text-sm space-y-5">
+            <div className="hidden lg:block w-full p-5 bg-black/10 text-sm space-y-5">
                 <p>Note:</p>
                 <ul className='list-disc'>
                     <li>If you’ve used MetaMask before, you’ll already have a secret recovery phrase, which can restore your wallet on any device by importing the seed phrase. Otherwise, you can create a new wallet, after which you can agree or decline the request for user data.</li>
                     <li>Copy Keep your “Secret Backup Phrase” It’s important to keep this safe and never share it with anyone.</li>
                 </ul>
             </div>
+
         </div>
     )
 }
 
 const Selected2 = ({ setSelected }) => {
     return (
-        <div className="selected-2 px-[10%] text-white space-y-5 w-[1300px]">
+        <div className="selected-2 px-[10%] text-white space-y-5 lg:w-[1300px]">
             <div className="flex  items-center gap-5">
                 <div className="w-[100px] h-[100px] relative flex justify-center items-center hover:scale-110 duration-200 cursor-pointer" >
                     <div className="absolute w-full h-full bg-[#E57FED]/60" style={{ filter: 'blur(46px)' }}></div>
@@ -167,7 +209,7 @@ const Selected2 = ({ setSelected }) => {
 
 const Selected3 = ({ setSelected }) => {
     return (
-        <div className="selected-1 px-[10%] text-white space-y-5 w-[1300px]">
+        <div className="selected-1 px-[10%] text-white space-y-5 lg:w-[1300px]">
             <div className="flex  items-center gap-5">
                 <div className="w-[100px] h-[100px] relative flex justify-center items-center hover:scale-110 duration-200 cursor-pointer"  >
                     <div className="absolute w-full h-full bg-[#6000B6]/60" style={{ filter: 'blur(46px)' }}></div>
@@ -178,7 +220,7 @@ const Selected3 = ({ setSelected }) => {
 
             <p className='text-xl'>1. Navigate to the VapeMonkey NFT Marketplace</p>
 
-            <div className="flex gap-5 items-center">
+            <div className="flex flex-wrap gap-5 items-center">
                 <a href="https://vapemonkeynft.io" target="_blank" rel="noopener noreferrer">
                     <button className='bg-white text-black w-[256px] h-[56px] rounded hover:scale-110 duration-200'>NFT Marketplace</button>
                 </a>
@@ -200,7 +242,7 @@ const Selected3 = ({ setSelected }) => {
 
 const Selected4 = ({ setSelected }) => {
     return (
-        <div className="selected-1 px-[10%] text-white space-y-10 w-[1300px]">
+        <div className="selected-1 px-[10%] text-white space-y-10 lg:w-[1300px]">
             <div className="flex  items-center gap-5">
                 <div className="w-[100px] h-[100px] relative flex justify-center items-center hover:scale-110 duration-200 cursor-pointer" >
                     <div className="absolute w-full h-full bg-[#5AACA7]/60" style={{ filter: 'blur(46px)' }}></div>
