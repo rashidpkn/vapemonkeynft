@@ -20,6 +20,13 @@ function Screen4() {
         Aos.init()
     }, [])
 
+    useEffect(() => {
+      
+    if (selected !== 0) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "auto"
+
+    }, [selected])
+    
 
     return (
         <div className='space-y-10'>
@@ -133,7 +140,7 @@ function Screen4() {
                 {selected === 2 && <Selected2 setSelected={setSelected} />}
                 {selected === 3 && <Selected3 setSelected={setSelected} />}
                 {selected === 4 && <Selected4 setSelected={setSelected} />}
-                <div className="flex justify-between absolute w-full lg:w-[1200px] bottom-10 px-5">
+                <div className="flex justify-between absolute w-full lg:w-[1200px] bottom-10 lg:bottom-10 px-5">
                     <button className='bg-white text-black px-8 py-2 rounded hover:scale-110 duration-200' onClick={() => { setSelected(selected - 1) }}>BACK</button>
                     <button className='bg-white text-black px-8 py-2 rounded hover:scale-110 duration-200' onClick={() => { selected === 4 ? setSelected(0) : setSelected(selected + 1) }}>NEXT</button>
                 </div>

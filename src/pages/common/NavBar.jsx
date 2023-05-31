@@ -79,7 +79,7 @@ function NavBar() {
             <nav className={`${menu ? 'flex' : 'hidden'} flex-col flex-wrap text-4xl font-normal gap-1 text-black p-3 decoration-[#ff0097]`}>
                 <li onClick={()=>{dispatch(setRoadMap(false));setMenu(false)}} className={`decoration-[#ff0097] ${pathname === '/' && 'line-through'} h-1/3 flex items-center`}><Link title='home' to={'/'}> Home </Link></li>
                 <li onClick={()=>{dispatch(setRoadMap(false));setMenu(false)}} className={`decoration-[#ff0097] ${pathname === '/about' && 'line-through'} h-1/3 flex items-center`}><Link title='about' to={'/about'}> About </Link></li>
-                <li onClick={()=>{dispatch(setRoadMap(true));setMenu(false)}} className={`decoration-[#ff0097] ${pathname === '/roadmaps' && 'line-through'} h-1/3 flex items-center cursor-pointer`} > Roadmaps </li>
+                {/* <li onClick={()=>{dispatch(setRoadMap(true));setMenu(false)}} className={`decoration-[#ff0097] ${pathname === '/roadmaps' && 'line-through'} h-1/3 flex items-center cursor-pointer`} > Roadmaps </li> */}
                 <li onClick={()=>{dispatch(setRoadMap(false));setMenu(false)}} className={`decoration-[#ff0097] ${pathname === '/contact' && 'line-through'} h-1/3 flex items-center`}><Link title='contact' to={'/contact'}> Contact </Link></li>
             </nav>
         </div>

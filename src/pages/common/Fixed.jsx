@@ -3,15 +3,16 @@ import { useSelector, useDispatch } from 'react-redux'
 import { setRoadMap } from '../../redux/slice/util'
 
 function Fixed() {
+  // eslint-disable-next-line
   const dispatch = useDispatch()
   return (
     <>
-      <div className="fixed bottom-5 md:bottom-10 left-5 md:left-10  gap-3">
+      {/* <div className="fixed bottom-5 md:bottom-10 left-5 md:left-10  gap-3">
         <button aria-label="Road map" title='Road map' className="px-2 md:px-4  py-2 md:py-3 bg-[#212121] hover:invert duration-700 rounded-full flex items-center justify-center gap-5" onClick={() => { dispatch(setRoadMap(true)) }}>
           <img src="/image/common/road-map.svg" className='w-9 h-9' alt="road map" title='road map' />
           <span className='text-xs text-white  w-20 md:w-32 flex justify-center items-center font-medium'>THE ROADMAP</span>
         </button>
-      </div>
+      </div> */}
       <div className="fixed bottom-5 md:bottom-10 right-5 md:right-10  gap-3">
         <a href="https://mint.vapemonkeynft.io">
           <button aria-label="Road map" title='MINT NOW' className="px-2 md:px-4  py-2 md:py-3 bg-[#212121] hover:invert duration-700 rounded-full flex items-center justify-center gap-5" >
@@ -21,7 +22,7 @@ function Fixed() {
         </a>
       </div>
 
-      <RoadMap />
+      {/* <RoadMap /> */}
     </>
   )
 }
@@ -73,7 +74,7 @@ const roadmap = [
 
 
 
-
+// eslint-disable-next-line
 const RoadMap = () => {
   const dispatch = useDispatch()
   const { roadMap } = useSelector(state => state.util)
